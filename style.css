@@ -159,48 +159,47 @@ body.dark-mode table {
     100% { background-color: #e6d74f; }
 }
 
-/* --- MOBILE FIX: semafori in fila con scroll orizzontale --- */
+/* --- MOBILE: 5 semafori tutti visibili, ridimensionati --- */
 @media (max-width: 600px) {
-    .container {
-        padding: 15px;
-        border-radius: 10px;
-    }
+  .container {
+    padding: 14px;
+    border-radius: 10px;
+  }
 
-    h1 {
-        font-size: 1.8em;
-    }
+  h1 { font-size: 1.6rem; }
 
-    button {
-        padding: 10px 18px;
-        font-size: 14px;
-        margin: 5px;
-    }
+  button {
+    padding: 10px 16px;
+    font-size: 14px;
+    margin: 6px;
+  }
 
-    /* In fila, no wrap, con scroll orizzontale + snap */
-    .traffic-lights {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 12px;
-        justify-content: flex-start;
-        overflow-x: auto;
-        padding: 8px 4px 12px;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
-    }
+  .traffic-lights {
+    display: flex;
+    flex-wrap: nowrap;                /* tutti in una sola riga */
+    justify-content: space-between;
+    gap: 6px;                          /* 4 gap => 24px totali */
+    margin: 16px 0;
+  }
 
-    .traffic-light {
-        flex: 0 0 auto;
-        scroll-snap-align: start;
-        margin: 0;
-    }
+  .traffic-light {
+    flex: 0 0 calc((100% - 24px) / 5); /* 5 colonne perfette */
+    padding: 6px;
+    border-width: 3px;
+    margin: 0;
+  }
 
-    .light {
-        width: clamp(38px, 12vw, 52px);
-        height: clamp(38px, 12vw, 52px);
-        margin: 6px 0;
-    }
+  /* Luci: diametro = larghezza del blocco; altezza con aspect-ratio */
+  .light {
+    width: 100%;
+    aspect-ratio: 1 / 1;               /* cerchio perfetto */
+    margin: 4px 0;
+  }
 
-    table {
-        font-size: 14px;
-    }
+  #message { font-size: 16px; }
+  #result  { font-size: 20px; }
+  table    { font-size: 14px; }
+
+  /* Grafico responsive */
+  #chartContainer canvas { max-width: 100%; height: auto !important; }
 }
