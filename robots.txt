@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://davidinx.github.io/Reaction-time-test/sitemap.xml
+Sitemap: https://gist.githubusercontent.com/Davidinx/2d60b957bead6c7fd315de0a5fdabb16/raw/8e788a0d1f94e2c94ccf8b8a3537ccdd3a082f3e/sitemap.xml
