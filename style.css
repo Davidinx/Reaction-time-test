@@ -159,7 +159,7 @@ body.dark-mode table {
     100% { background-color: #e6d74f; }
 }
 
-/* Adattamento generale per schermi piccoli */
+/* --- MOBILE FIX: semafori in fila con scroll orizzontale --- */
 @media (max-width: 600px) {
     .container {
         padding: 15px;
@@ -176,18 +176,27 @@ body.dark-mode table {
         margin: 5px;
     }
 
+    /* In fila, no wrap, con scroll orizzontale + snap */
     .traffic-lights {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 12px;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 8px 4px 12px;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
     }
 
     .traffic-light {
-        margin: 10px 0;
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        margin: 0;
     }
 
     .light {
-        width: 50px;
-        height: 50px;
+        width: clamp(38px, 12vw, 52px);
+        height: clamp(38px, 12vw, 52px);
         margin: 6px 0;
     }
 
