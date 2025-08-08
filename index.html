@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>F1 Reaction Time Test</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+  <h1>Testa il tuo tempo di reazione</h1>
+  </header>
+
+  <div class="container">
+
+    <div class="traffic-lights">
+      <div class="traffic-light"><div class="light"></div><div class="light"></div><div class="light"></div></div>
+      <div class="traffic-light"><div class="light"></div><div class="light"></div><div class="light"></div></div>
+      <div class="traffic-light"><div class="light"></div><div class="light"></div><div class="light"></div></div>
+      <div class="traffic-light"><div class="light"></div><div class="light"></div><div class="light"></div></div>
+      <div class="traffic-light"><div class="light"></div><div class="light"></div><div class="light"></div></div>
+    </div>
+
+    <div class="buttons">
+      <button id="startButton">Inizia Test</button>
+      <button id="themeButton">Modalità Scura</button>
+      <button id="downloadButton">Scarica Dati</button>
+      <button id="resetButton">Resetta Dati</button>
+    </div>
+
+    <p id="message">Premi "Inizia Test" per cominciare</p>
+    <p id="result"></p>
+    <p id="stats"></p>
+
+    <table id="resultsTable">
+      <thead>
+        <tr><th>#</th><th>Tempo di reazione (ms)</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div id="chartContainer">
+      <canvas id="reactionChart" width="400" height="200"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <footer>
+  <p>&copy;2025 Davide - Tutti i diritti riservati</p>
+  </footer>
+
+</body>
+</html>
