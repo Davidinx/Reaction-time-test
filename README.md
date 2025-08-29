@@ -18,6 +18,7 @@ Il sito è ottimizzato per desktop e dispositivi mobili, garantendo un’esperie
 
 ## Licenza
 Questo progetto è rilasciato con **Licenza Proprietaria**.  
-© 2025 [Il Tuo Nome] — Tutti i diritti riservati.  
+© 2025 Davide — Tutti i diritti riservati.  
 L’uso è consentito esclusivamente per scopi personali e non commerciali.  
 La copia, modifica o redistribuzione del codice sorgente è vietata senza autorizzazione scritta.
+
